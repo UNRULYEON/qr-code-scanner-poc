@@ -11,20 +11,19 @@ const useScanner = () => {
   const [error, setError] = useState<string | undefined>(undefined);
 
   useEffect(() => {
-    Html5Qrcode.getCameras()
-      .then((devices) => {
-        if (devices && devices.length) setCameraId(devices[0].id);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-
-    setScanner(
-      new Html5Qrcode("qr-code-reader", {
-        verbose: true,
-        formatsToSupport: [Html5QrcodeSupportedFormats.QR_CODE],
-      })
-    );
+    // Html5Qrcode.getCameras()
+    //   .then((devices) => {
+    //     if (devices && devices.length) setCameraId(devices[0].id);
+    //   })
+    //   .catch((err) => {
+    //     console.error(err);
+    //   });
+    // setScanner(
+    //   new Html5Qrcode("qr-code-reader", {
+    //     verbose: true,
+    //     formatsToSupport: [Html5QrcodeSupportedFormats.QR_CODE],
+    //   })
+    // );
   }, []);
 
   useEffect(() => {
